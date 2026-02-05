@@ -35,6 +35,19 @@ if (process.env.MONGODB_URI) {
 // Routes
 app.use('/api', contactRoutes);
 
+// Root test route
+app.get('/', (req, res) => {
+  res.json({ 
+    success: true,
+    message: 'Portfolio Backend API is running',
+    endpoints: {
+      health: '/api/health',
+      contact: '/api/contact (POST)'
+    },
+    timestamp: new Date().toISOString()
+  });
+});
+
 // Health check
 app.get('/api/health', (req, res) => {
   res.json({ 
