@@ -29,7 +29,3 @@ A modern, responsive **portfolio website** built with the **MERN stack**, featur
 
 ## ⚡ Quick Start
 
-### 1️⃣ Clone Repository
-```bash
-git clone https://github.com/Aman1879/portfolio-mern.git
-cd portfolio-mern
