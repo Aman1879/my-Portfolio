@@ -32,7 +32,7 @@ const Home = () => {
     }, typingSpeed);
 
     return () => clearTimeout(timer);
-  }, [charIndex, isDeleting, wordIndex, words]);
+  }, [charIndex, isDeleting, wordIndex]);
 
   const handleContactClick = () => {
     const contactSection = document.getElementById('contact');

@@ -2,8 +2,6 @@ import nodemailer from 'nodemailer';
 
 export const sendContactEmail = async (req, res) => {
   try {
-    console.log('📧 Received form data:', req.body);
-    
     const { user_name, user_email, message } = req.body;
     
     if (!user_name || !user_email || !message) {
@@ -17,12 +15,6 @@ export const sendContactEmail = async (req, res) => {
     const emailUser = process.env.EMAIL_USER || 'amanara13579@gmail.com';
     const emailPassword = (process.env.EMAIL_PASSWORD || '').replace(/\s/g, '');
     const adminEmail = process.env.ADMIN_EMAIL || 'amanara13579@gmail.com';
-
-    console.log('🔐 Using credentials:', {
-      user: emailUser,
-      passLength: emailPassword.length,
-      admin: adminEmail
-    });
 
     const transporter = nodemailer.createTransport({
       service: 'gmail',
@@ -52,7 +44,6 @@ export const sendContactEmail = async (req, res) => {
 
     // Send email
     await transporter.sendMail(mailOptions);
-    console.log('✅ Email sent successfully!');
 
     res.status(200).json({
       success: true,
@@ -60,7 +51,9 @@ export const sendContactEmail = async (req, res) => {
     });
 
   } catch (error) {
-    console.error('❌ Error sending email:', error.message);
+    if (process.env.NODE_ENV !== 'production') {
+      console.error('Error sending email:', error.message);
+    }
 
     res.status(500).json({
       success: false,

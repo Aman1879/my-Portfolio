@@ -46,7 +46,9 @@ app.get('/api/health', (req, res) => {
 
 // Error handling middleware
 app.use((err, req, res, next) => {
-  console.error('Error:', err);
+  if (process.env.NODE_ENV !== 'production') {
+    console.error('Error:', err);
+  }
   res.status(500).json({
     success: false,
     message: 'Something went wrong!',
@@ -63,12 +65,16 @@ app.use((req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`
+  if (process.env.NODE_ENV !== 'production') {
+    console.log(`
 ╔══════════════════════════════════════╗
 ║  Portfolio Backend Server Running    ║
 ║  Port: ${PORT}                        ║
 ║  Environment: ${process.env.NODE_ENV || 'development'}            ║
 ║  API: http://localhost:${PORT}/api    ║
 ╚══════════════════════════════════════╝
-  `);
+    `);
+  } else {
+    console.log(`Server running on port ${PORT}`);
+  }
 });
