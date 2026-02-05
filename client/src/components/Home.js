@@ -3,12 +3,12 @@ import '../styles/Home.css';
 
 const Home = () => {
   const [displayText, setDisplayText] = useState('');
-  const words = ["Frontend Developer", "Software Developer", "Problem Solver"];
   const [wordIndex, setWordIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
+    const words = ["Frontend Developer", "Software Developer", "Problem Solver"];
     const typingSpeed = isDeleting ? 50 : 100;
     const timer = setTimeout(() => {
       const currentWord = words[wordIndex];
