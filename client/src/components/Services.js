@@ -5,23 +5,31 @@ const Services = () => {
   const skillsData = [
     {
       category: 'Languages',
-      skills: ['Java', 'C++', 'PHP', 'C', 'JavaScript']
+      skills: ['Java', 'C++', 'PHP', 'JavaScript (ES6+)']
     },
     {
-      category: 'Frameworks & Libraries',
-      skills: ['React.js', 'Node.js', 'Express.js', 'HTML5', 'CSS3', 'Tailwind CSS', 'WordPress']
+      category: 'Web Technologies',
+      skills: ['HTML5', 'CSS3', 'Tailwind CSS', 'React.js']
+    },
+    {
+      category: 'Backend & Runtimes',
+      skills: ['Node.js', 'Express.js', 'WordPress (CMS)']
+    },
+    {
+      category: 'Databases',
+      skills: ['MySQL', 'MongoDB', 'MongoDB Atlas', 'phpMyAdmin']
     },
     {
       category: 'Tools & Platforms',
-      skills: ['MySQL', 'MongoDB', 'Git', 'GitHub', 'phpMyAdmin']
+      skills: ['Git', 'GitHub', 'VS Code', 'Netlify', 'Render', 'Vercel']
     },
     {
       category: 'Core CS Fundamentals',
-      skills: ['DBMS', 'OS', 'SQL', 'OOP Concepts', 'DSA']
+      skills: ['DSA', 'DBMS', 'Operating Systems', 'Object-Oriented Programming (OOP)']
     },
     {
       category: 'Soft Skills',
-      skills: ['Problem-Solving', 'Discipline-focused', 'Solution-Oriented', 'Growth Mindset']
+      skills: ['Leadership & Team Management', 'Problem-Solving', 'Adaptability', 'Growth Mindset']
     }
   ];
 

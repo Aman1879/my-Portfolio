@@ -26,8 +26,8 @@ const About = () => {
           <h2>What Drives Me</h2>
           <div className="card">
             <div className="c1">
-              <h3><i className="fa-solid fa-code"></i> Languages</h3>
-              <p>HTML, CSS, JavaScript, Java, C++, React, Tailwind, Node.js, PHP</p>
+              <h3><i className="fa-solid fa-code"></i> Core Skills</h3>
+              <p>Java, C++, PHP, JavaScript (ES6+), React.js, Node.js, Express.js, MongoDB, Tailwind CSS</p>
             </div>
             <div className="c1">
               <h3><i className="fa-solid fa-graduation-cap"></i> Education</h3>

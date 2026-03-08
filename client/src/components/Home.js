@@ -63,7 +63,7 @@ const Home = () => {
                 <i className="fa-solid fa-arrow-right"></i> Contact Me
               </button>
               <button className="btn-home2">
-                <a href="/assets/Amanupdated.pdf" download>
+                <a href="/assets/30JanUpdated.pdf" download="30JanUpdated.pdf">
                   <i className="fa-solid fa-download"></i> Download CV
                 </a>
               </button>

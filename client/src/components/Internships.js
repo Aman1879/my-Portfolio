@@ -2,17 +2,28 @@ import React from 'react';
 import '../styles/Internships.css';
 
 const Internships = () => {
-  const internships = [
+  const experiences = [
     {
       id: 1,
-      position: 'Web Developer Intern',
-      company: 'Vanillakart',
-      companyLink: 'https://vanillakart.com/',
-      duration: 'Sep 2025 – Nov 2025',
+      section: 'Internship',
+      position: 'Full Stack Web Developer Intern',
+      company: 'DSPL Technologies',
+      duration: 'Jun 2025 - Aug 2025',
       location: 'Remote',
-      description: `Developed hybrid web solutions by building scalable applications with the MERN stack and customizing WordPress CMS platforms to meet diverse client requirements. Streamlined User Experience (UX) by designing dynamic interfaces using React.js and optimizing WordPress themes for responsiveness and speed. Collaborated on backend integration tasks using Node.js while ensuring site stability through rigorous testing and plugin management.`,
-      technologies: ['WordPress', 'React.js', 'Node.js', 'MongoDB', 'Rest API'],
+      description: `Built and maintained full-stack applications using React.js and Node.js. Designed modular REST APIs, improved backend architecture, and contributed to better reliability and performance across features.`,
+      technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JavaScript', 'REST APIs'],
       icon: 'fa-code'
+    },
+    {
+      id: 2,
+      section: 'Freelance',
+      position: 'Freelance Frontend Developer',
+      company: 'CodeTexa',
+      duration: 'Jan 2026 - Present',
+      location: 'Remote',
+      description: `Developing responsive frontend experiences for a Learning Management System with role-based access. Implemented secure API integration with JWT-based authentication and optimized state-driven UI performance for better engagement.`,
+      technologies: ['React.js', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'REST APIs', 'JWT', 'Netlify'],
+      icon: 'fa-laptop-code'
     }
   ];
 
@@ -20,20 +31,21 @@ const Internships = () => {
     <section className="internships" id="internships">
       <p>PROFESSIONAL EXPERIENCE</p>
       <div className="title">
-        <h1>Internships</h1>
-        <p>My professional development and work experience</p>
+        <h1>Work & Experience</h1>
+        <p>Internship and freelance roles from my recent professional journey</p>
       </div>
       <div className="hrrr">
         <hr />
       </div>
       <div className="internships-container">
-        {internships.map((internship) => (
+        {experiences.map((internship) => (
           <div className="internship-card" key={internship.id}>
             <div className="internship-header">
               <div className="company-icon">
                 <i className={`fa-solid ${internship.icon}`}></i>
               </div>
               <div className="company-info">
+                <p className="experience-type">{internship.section}</p>
                 <h3>{internship.position}</h3>
                 <p className="company-name">
                   {internship.companyLink ? (

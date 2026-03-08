@@ -27,7 +27,6 @@ const Contact = () => {
 
     try {
       const apiUrl = process.env.REACT_APP_API_URL || 'https://egamanportfolio-backend.onrender.com';
-
       const response = await axios.post(`${apiUrl}/api/contact`, formData);
       
       if (response.status === 200) {
